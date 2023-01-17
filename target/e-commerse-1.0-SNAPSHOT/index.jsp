@@ -1,22 +1,22 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="java.sql.*"%>
 
 <%
     Connection con=null;
     Statement stmt=null;
-    ResultSet rs=null;
-    
+    ResultSet rs = null;
 
     try {
         Class.forName("com.mysql.jdbc.Driver");
-        con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ElectronicsShop","","");
+        con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ElectronicsShop","root","");
         stmt = con.createStatement();
         String sql = "SELECT * FROM products";
         rs = stmt.executeQuery(sql);
     } catch (SQLException se) {
-        se.printStackTrace();
-    } catch (Exception e) {
-        e.printStackTrace();
-    }
+    se.printStackTrace();
+} catch (Exception e) {
+    e.printStackTrace();
+}
 %>
 
 
@@ -46,21 +46,23 @@
     <section id="featured-products">
       <h2>Featured Products</h2>
       <ul>
+          <%while(rs.next()){%>
         <li>
           <img src="product1.jpg" alt="product 1">
-          <h3>Product 1</h3>
-          <p>$19.99</p>
+          <h3><%=rs.getString("title")%></h3>
+          <p>$<%=rs.getString("price")%> </p>
           <button>Add to Cart</button>
         </li>
+        <%}%>
       </ul>
     </section>
     <section id="about-us">
       <h2>About Us</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, magna sit amet bibendum dignissim, augue velit convallis ipsum, at fermentum ligula augue eget metus.</p>
+      <p> We are the best shop in Kigali.</p>
     </section>
   </main>
   <footer>
-    <p>Copyright ©2022 My E-Commerce Store</p>
+    <p>Copyright Â©2022 My E-Commerce Store</p>
   </footer>
 </body>
 </html>
