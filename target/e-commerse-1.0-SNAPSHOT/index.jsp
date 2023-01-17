@@ -48,7 +48,11 @@
       <ul>
           <%while(rs.next()){%>
         <li>
-          <img src="product1.jpg" alt="product 1">
+<%
+    String image=rs.getString("image");
+    image = image.substring(1, image.length() - 1); //because the image link from db has this format []
+%>
+<img src=<%=image%>>
           <h3><%=rs.getString("title")%></h3>
           <p>$<%=rs.getString("price")%> </p>
           <button>Add to Cart</button>

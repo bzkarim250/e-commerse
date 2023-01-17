@@ -144,3 +144,45 @@ footer {
   text-align: center;
 }
 
+
+
+
+/* Additional Styles */
+/* Change color scheme */
+:root {
+  --primary-color: #ff6600;
+  --secondary-color: #333;
+  --tertiary-color: #f5f5f5;
+}
+
+/* Apply the new color scheme */
+header,
+footer {
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+
+nav a {
+  color: #fff;
+}
+
+nav a.active {
+  color: var(--primary-color);
+}
+
+#hero {
+  background-color: var(--tertiary-color);
+}
+
+#hero button {
+  background-color: var(--primary-color);
+}
+
+#featured-products {
+  background-color: var(--tertiary-color);
+}
+
+#featured-products button {
+  background-color: var(--primary-color);
+}
+
