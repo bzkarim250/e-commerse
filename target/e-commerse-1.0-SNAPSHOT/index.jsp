@@ -60,7 +60,7 @@
         <%}%>
       </ul>
     </section>
-    <section id="about-us">
+      <section style="background-color: #D4CC9D" id="about-us">
       <h2>About Us</h2>
       <p> We are the best shop in Kigali.</p>
     </section>

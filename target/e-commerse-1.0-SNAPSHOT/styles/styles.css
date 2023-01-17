@@ -1,3 +1,10 @@
+:root {
+  --primary-color: #A17C48;
+  --secondary-color: #D4CC9D;
+  --text-color: #fff;
+  --font-size: 1.2rem;
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -5,35 +12,9 @@ body {
 }
 
 header {
-  background-color: #333;
-  color: #fff;
+  background-color: var(--primary-color);
+  color: var(--text-color);
   padding: 1rem;
-}
-
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-
-nav li {
-  margin-right: 1rem;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-}
-
-#hero {
-  background-color: #f5f5f5;
-  padding: 2rem;
-  text-align: center;
-}
-
-/* Additional Styles */
-header {
   position: fixed;
   width: 100%;
   top: 0;
@@ -41,8 +22,24 @@ header {
   z-index: 10;
 }
 
+nav {
+  display: flex;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
 nav li {
-  font-size: 1.2rem;
+  margin-right: 1rem;
+  font-size: var(--font-size);
+}
+
+nav a {
+  color: var(--text-color);
+  text-decoration: none;
 }
 
 nav a:hover {
@@ -50,10 +47,13 @@ nav a:hover {
 }
 
 #hero {
-  height: 70vh;
+  background-color: var(--secondary-color);
+  padding: 2rem;
+  text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 70vh;
 }
 
 #hero h1 {
@@ -62,11 +62,11 @@ nav a:hover {
 }
 
 #hero button {
-  background-color: #333;
-  color: #fff;
+  background-color: var(--primary-color);
+  color: var(--text-color);
   border: none;
   padding: 0.5rem 1rem;
-  font-size: 1.2rem;
+  font-size: var(--font-size);
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -76,7 +76,7 @@ nav a:hover {
 }
 
 #featured-products {
-  background-color: #f5f5f5;
+  background-color: var(--secondary-color);
   padding: 2rem;
 }
 
@@ -94,52 +94,69 @@ nav a:hover {
 
 #featured-products li {
   width: 30%;
-  margin: 1rem;
-  text-align: center;
+  margin:1rem;
+text-align: center;
 }
 
 #featured-products img {
-  max-width: 100%;
-  margin-bottom: 0.5rem;
+max-width: 100%;
+margin-bottom: 0.5rem;
 }
 
 #featured-products h3 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+font-size: 1.5rem;
+margin-bottom: 0.5rem;
 }
 
 #featured-products p {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
+font-size: var(--font-size);
+margin-bottom: 1rem;
 }
 
 #featured-products button {
-  background-color: #333;
-  color: #fff;
-  border: none;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+background-color: var(--primary-color);
+color: var(--text-color);
+border: none;
+padding: 0.5rem 1rem;
+font-size: 1rem;
+cursor: pointer;
+transition: background-color 0.3s ease;
 }
 
 #featured-products button:hover {
-  background-color: #555;
+background-color: #555;
 }
 
 #about-us {
-  padding: 2rem;
+padding: 2rem;
 }
 
 #about-us h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  text-align: center;
+font-size: 2rem;
+margin-bottom: 1rem;
+text-align: center;
 }
 
 footer {
-  background-color: #333;
-  color: #fff;
-  padding: 1rem;
-  text-align: center;
+background-color: var(--primary-color);
+color: var(--text-color);
+padding: 1rem;
+text-align: center;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+nav {
+flex-wrap: wrap;
+}
+
+nav li {
+width: 100%;
+text-align: center;
+margin-bottom: 0.5rem;
+}
+
+#featured-products li {
+width: 100%;
+}
 }
