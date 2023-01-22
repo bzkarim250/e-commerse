@@ -1,6 +1,6 @@
 :root {
-  --primary-color: #A17C48;
-  --secondary-color: #D4CC9D;
+  --primary-color: #32AB64;
+  --secondary-color: #EFE5FF;
   --text-color: #fff;
   --font-size: 1.2rem;
 }
@@ -12,7 +12,7 @@ body {
 }
 
 header {
-  background-color: var(--primary-color);
+  background-color:var(--primary-color);
   color: var(--text-color);
   padding: 1rem;
   position: fixed;
@@ -23,27 +23,32 @@ header {
 }
 
 nav {
-  display: flex;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 0 1rem;
 }
 
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+ul {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   display: flex;
 }
 
-nav li {
-  margin-right: 1rem;
-  font-size: var(--font-size);
+li {
+   margin: 0 0.5rem;
 }
 
-nav a {
-  color: var(--text-color);
-  text-decoration: none;
+a {
+   color: #fff;
+   text-decoration: none;
+   font-size: 1.2rem;
+   font-weight: bold;
 }
 
-nav a:hover {
-  color: #ccc;
+a:hover {
+   color: #154F2B;
 }
 
 #hero {
@@ -90,12 +95,13 @@ nav a:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  list-style: none;
 }
 
 #featured-products li {
   width: 30%;
   margin:1rem;
-text-align: center;
+  text-align: center;
 }
 
 #featured-products img {
@@ -135,6 +141,10 @@ padding: 2rem;
 font-size: 2rem;
 margin-bottom: 1rem;
 text-align: center;
+background-color: white;
+}
+#about-us p{
+    text-align: center;
 }
 
 footer {
@@ -143,6 +153,7 @@ color: var(--text-color);
 padding: 1rem;
 text-align: center;
 }
+
 
 /* Media Queries */
 @media (max-width: 768px) {

@@ -24,15 +24,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>E-Commerce Homepage</title>
-  <link rel="stylesheet" type="text/css" href="styles/styles.css">
+  <title>Homepage</title>
+  <link rel="stylesheet" type="text/css" href="styles/style.css">
 </head>
 <body>
   <header>
     <nav>
       <ul>
         <li><a href="#">Home</a></li>
+        <li><input type="search" id="search-box" placeholder="search..."></li>
         <li><a href="#">Shop</a></li>
+        <li><a href="#" class="cart">Your Cart</a></li>
         <li><a href="#">About</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
@@ -60,7 +62,7 @@
         <%}%>
       </ul>
     </section>
-      <section style="background-color: #D4CC9D" id="about-us">
+      <section id="about-us">
       <h2>About Us</h2>
       <p> We are the best shop in Kigali.</p>
     </section>
