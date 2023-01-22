@@ -26,6 +26,7 @@
 <head>
   <title>Homepage</title>
   <link rel="stylesheet" type="text/css" href="styles/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
   <header>
@@ -34,7 +35,7 @@
         <li><a href="#">Home</a></li>
         <li><input type="search" id="search-box" placeholder="search..."></li>
         <li><a href="#">Shop</a></li>
-        <li><a href="#" class="cart">Your Cart</a></li>
+        <li><a href="#" class="carts">0<i class="fa fa-shopping-cart"></i></a></li>
         <li><a href="#">About</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
@@ -42,7 +43,7 @@
   </header>
   <main>
     <section id="hero">
-      <h1>Welcome to Our E-Commerce Store</h1>
+      <h1>Welcome To ElectronicsShop</h1>
       <button>Shop Now</button>
     </section>
     <section id="featured-products">
@@ -57,7 +58,7 @@
 <img src=<%=image%>>
           <h3><%=rs.getString("title")%></h3>
           <p>$<%=rs.getString("price")%> </p>
-          <button>Add to Cart</button>
+          <button class="cart"> Add to Cart</button>
         </li>
         <%}%>
       </ul>
@@ -70,5 +71,7 @@
   <footer>
     <p>Copyright ©2022 My E-Commerce Store</p>
   </footer>
+
+  <script src="./js/index.js"></script>
 </body>
 </html>
