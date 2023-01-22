@@ -61,7 +61,7 @@
 <img src=<%=image%>>
           <h3><%=rs.getString("title")%></h3>
           <p>$<%=rs.getString("price")%> </p>
-          <button class="cart"> Add to Cart</button>
+          <button class="add-to-cart"> Add to Cart</button>
         </li>
         <%}%>
       </ul>
