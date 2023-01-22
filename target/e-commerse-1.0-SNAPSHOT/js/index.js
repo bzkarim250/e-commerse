@@ -40,10 +40,19 @@ cartButton.forEach((button)=>{
     cart.innerHTML=`
     <i class="fa fa-shopping-cart"></i><span>${count}</span>
     `;
-    console.log(carts);
-
-
+    localStorage.setItem('cart',JSON.stringify(carts));
   })
 });
+
+carts=JSON.parse(localStorage.getItem('cart'))||[];
+console.log(carts);
+count=0;
+if(carts){
+  count=carts.reduce((acc,item)=>acc+item.qty,0);
+      cart.innerHTML=`
+    <i class="fa fa-shopping-cart"></i><span>${count}</span>
+    `;
+}
+
 
 
