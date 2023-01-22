@@ -8,6 +8,7 @@ shop.addEventListener('click',e=>{
 });
 
 //add to cart
+let expTime=(new Date().getTime()+(1000*60*60)); // 1hr from now
 let carts=[];
 let count=0;
 let qty=0;
@@ -36,22 +37,30 @@ cartButton.forEach((button)=>{
       carts[index].qty+=1;
       count++;
     }
+    //
+  let cartData={
+    items:carts,
+    expiration:expTime
+  };
 
     cart.innerHTML=`
     <i class="fa fa-shopping-cart"></i><span>${count}</span>
     `;
-    localStorage.setItem('cart',JSON.stringify(carts));
+    localStorage.setItem('cart',JSON.stringify(cartData));
   })
 });
-
-carts=JSON.parse(localStorage.getItem('cart'))||[];
-console.log(carts);
-count=0;
-if(carts){
-  count=carts.reduce((acc,item)=>acc+item.qty,0);
-      cart.innerHTML=`
+let cartData = JSON.parse(localStorage.getItem('cart')) ||{};
+if(cartData && cartData.expiration < new Date().getTime()){
+  localStorage.removeItem('cart');
+  cartData = {};
+}
+console.log(cartData);
+count = 0;
+if(cartData && cartData.items){
+  count = cartData.items.reduce((acc,item)=>acc+item.qty,0);
+  cart.innerHTML=`
     <i class="fa fa-shopping-cart"></i><span>${count}</span>
-    `;
+  `;
 }
 
 
