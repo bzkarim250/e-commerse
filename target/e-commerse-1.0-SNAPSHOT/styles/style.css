@@ -1,5 +1,5 @@
 :root {
-  --primary-color: #32AB64;
+  --primary-color: #3E8087;
   --secondary-color: #EFE5FF;
   --text-color: #fff;
   --font-size: 1.2rem;
@@ -39,6 +39,28 @@ ul {
 li {
    margin: 0 0.5rem;
 }
+nav ul li span{
+  color: #FFE70F;
+}
+
+#search-box {
+  width: 300px;
+  height: 35px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 20px;
+  border: none;
+  margin-left: auto;
+}
+#search-box:focus {
+  border: 2px solid white;
+  outline: none;
+}
+
+#search-box:focus + i {
+  color: #00bfff;
+}
+
 
 a {
    color: #fff;
@@ -48,22 +70,33 @@ a {
 }
 
 a:hover {
-   color: #154F2B;
+   color: #62C1C4;
 }
 
+
 #hero {
-  background-color: var(--secondary-color);
+  background-color:var(--secondary-color);
   padding: 2rem;
-  text-align: center;
+  text-align: start;
   display: flex;
   align-items: center;
-  justify-content: center;
-  height: 70vh;
+  justify-content:flex-start;
+  height: 100vh;
+  background-image:url('iphon14.png');
+  background-size: 35%;
+  background-repeat: no-repeat;
+  background-position: 80%;
 }
 
 #hero h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+#hero p {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  background-color:var(--text-color);
 }
 
 #hero button {
@@ -77,7 +110,7 @@ a:hover {
 }
 
 #hero button:hover {
-  background-color: #555;
+  background-color: #62C1C4;
 }
 
 #featured-products {
@@ -130,7 +163,7 @@ transition: background-color 0.3s ease;
 }
 
 #featured-products button:hover {
-background-color: #555;
+background-color: #62C1C4;
 }
 
 #about-us {
