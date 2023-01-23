@@ -57,11 +57,13 @@
 <%
     String image=rs.getString("image");
     image = image.substring(1, image.length() - 1); //because the image link from db has this format []
+    String id=rs.getString("id");
 %>
 <img src=<%=image%>>
           <h3><%=rs.getString("title")%></h3>
           <p>$<%=rs.getString("price")%> </p>
           <button class="add-to-cart"> Add to Cart</button>
+          <a href="./User/singleProduct.jsp?id=<%=id%>">Read More</a>
         </li>
         <%}%>
       </ul>

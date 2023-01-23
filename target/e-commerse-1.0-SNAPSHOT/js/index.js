@@ -62,6 +62,3 @@ if(cartData && cartData.items){
     <i class="fa fa-shopping-cart"></i><span>${count}</span>
   `;
 }
-
-
-

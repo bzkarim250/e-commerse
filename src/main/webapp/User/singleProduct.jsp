@@ -39,10 +39,12 @@ image = image.substring(1, image.length() - 1);
 %>
 
 <div class="singleProduct">
+    <img src=<%=image%>>
     <h3><%=rs.getString("title")%></h3>
     <p><%=rs.getString("description")%></p>
      <p><%=rs.getString("size")%></p>
     <b><p><%=rs.getString("price")%></p></b>
+    <button class="add-to-cart"> Add to Cart</button>
 </div>
 <%}%>
 
