@@ -17,7 +17,7 @@
 
 <%@ include file="../Layouts/footer.jsp" %>
 
-  <script src="../js/index.js"></script>
+  <script src="../js/cart.js"></script>
 </body>
 </html>
 
