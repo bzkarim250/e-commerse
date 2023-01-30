@@ -5,7 +5,6 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<@ include file="../database/dbConnect.jsp" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,6 +13,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+<%@ include file="../database/dbConnect.jsp" %>
 <%@ include file="../Layouts/navbar.jsp" %>
 <%
 String id=request.getParameter("id");
